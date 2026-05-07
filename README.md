@@ -660,7 +660,13 @@ Use this as the full slide-by-slide deck structure. A strong deck should be 12 t
 
 ## Demo Video Instructions
 
-Target length: 2.5 to 3 minutes.
+Target length: **5 minutes**.
+
+The video should feel like a guided judge walkthrough, not a fast UI tour. The goal is to make three things obvious:
+
+1. **Problem:** business records are fragmented across departments.
+2. **Solution:** UBID-X creates explainable UBIDs with human review for risky cases.
+3. **Impact:** once identity is resolved, Karnataka can see which businesses are active, dormant, closed, or unmatched.
 
 Recommended recording setup:
 
@@ -670,73 +676,256 @@ Recommended recording setup:
 - Keep browser zoom at 90 or 100 percent.
 - Hide bookmarks and unrelated tabs.
 - Use a visible cursor.
-- Speak slowly and focus on decisions, not every UI detail.
+- Speak slowly and pause for 1 to 2 seconds after each tab opens.
+- Do not read every number on the screen. Explain what the screen proves.
+- Use the same structure throughout: "what problem this screen solves", "what action the user takes", and "why it matters for government".
+
+### 5-Minute Demo Storyline
+
+| Time | Screen | Judge takeaway |
+| --- | --- | --- |
+| 0:00 to 0:35 | Mission Control | UBID-X solves fragmented identity and activity blindness together. |
+| 0:35 to 1:10 | Mission Control source coverage | The prototype connects multiple department streams without replacing them. |
+| 1:10 to 2:00 | UBID Generator | The system creates explainable UBID links from messy records. |
+| 2:00 to 2:50 | Review Queue | Medium-confidence matches are reviewed by humans to prevent wrong merges. |
+| 2:50 to 3:40 | Activity Intel | UBIDs become useful because they show Active, Dormant, Closed, and Unmatched status. |
+| 3:40 to 4:20 | Analytics | Officers can ask cross-department policy questions. |
+| 4:20 to 4:45 | Architecture | The approach can be piloted without replacing existing systems. |
+| 4:45 to 5:00 | Product Guide or Mission Control | Close with the product promise and impact. |
 
 ### Demo Script
 
-#### 0:00 to 0:20 - Opening
+#### 0:00 to 0:35 - Opening: State the problem clearly
 
 Show Mission Control.
 
+What to do:
+
+- Keep the cursor still for the first 2 seconds.
+- Point to the headline and the workflow cards.
+- Do not click anything yet.
+
 Say:
 
-> UBID-X solves two connected problems: fragmented business identity and lack of operating-status visibility. It creates explainable UBIDs across departments and classifies businesses as active, dormant, closed, or unmatched.
+> This is UBID-X: an explainable Unique Business Identifier and active business intelligence prototype for Karnataka. The problem is that the same business can appear differently across departments. One department may know the industrial registration, another may know the GST filing, another may know labour returns, and another may only have a utility or license signal. Without a trusted UBID layer, it becomes difficult to know how many real businesses exist and whether they are actually operating.
 
-#### 0:20 to 0:45 - Source Coverage
+Then add:
+
+> UBID-X solves identity fragmentation and activity blindness together. It creates explainable UBIDs, sends uncertain matches to human review, and classifies businesses as Active, Dormant, Closed, or Unmatched.
+
+Why this matters:
+
+- Judges immediately understand the government problem.
+- You are not just showing a dashboard; you are explaining the need for the product.
+
+#### 0:35 to 1:10 - Source coverage and decision bands
 
 Point to the source streams and decision bands.
 
+What to do:
+
+- Point to the department/source stream area.
+- Point to the confidence decision bands.
+- Mention that the app uses mock data for demonstration.
+
 Say:
 
-> The prototype uses six government-style streams: Industries, GST, Labour, Pollution Control, utilities, and municipal licenses. Matches are separated into high confidence, medium confidence, and low confidence decisions.
+> The prototype uses six government-style streams: Industries, GST, Labour, Pollution Control, utilities, and municipal trade licenses. In real life, these systems do not always describe the same business in the same way. UBID-X sits above those systems and compares records across them.
 
-#### 0:45 to 1:20 - UBID Generator
+Then say:
+
+> The important part is the decision band. High-confidence matches can be auto-linked. Medium-confidence matches go to a reviewer. Low-confidence matches stay separate. This is important because a government UBID system must avoid wrong merges, not just find possible duplicates.
+
+Why this matters:
+
+- Judges see that the solution is careful and governance-aware.
+- This also prepares them for the Review Queue later.
+
+#### 1:10 to 2:00 - UBID Generator: show explainable identity resolution
 
 Open UBID Generator.
 
-Show the raw records, standardized fields, and a high-confidence match.
+What to do:
+
+- Click **UBID Generator**.
+- Point to raw records.
+- Point to standardized fields.
+- Point to a high-confidence candidate match, preferably Bengaluru Precision Components.
+- Point to the confidence score and signal bars.
 
 Say:
 
-> Here, two records describe the same business with different names. UBID-X compares identifiers, name, address, geography, and owner signals. Because PAN, GSTIN, PIN, and address evidence align, it can create a defendable UBID link.
+> This screen shows how UBID-X generates a trusted UBID. On the left, we have raw department records. They are messy: names are abbreviated, city spellings may differ, addresses may be written differently, and some sources may be missing identifiers.
 
-#### 1:20 to 1:50 - Review Queue
+Then say:
+
+> UBID-X standardizes the records and scores candidate links using multiple signals: identifier match, name similarity, address similarity, geography, and owner information. Here, the Bengaluru Precision Components records are strongly linked because PAN, GSTIN, PIN code, and address evidence align.
+
+Then say:
+
+> The key point is explainability. The system does not just say "match found." It shows why the match is proposed and how confident it is. That makes the UBID defendable for officers and reviewers.
+
+Why this matters:
+
+- Judges understand how messy records become a UBID.
+- You show the differentiator: explainable matching, not a black-box ID.
+
+#### 2:00 to 2:50 - Review Queue: show the safety layer
 
 Open Review Queue.
 
-Approve one medium-confidence match or show the approve/reject controls.
+What to do:
+
+- Click **Review Queue**.
+- Select or point to a medium-confidence case.
+- Point to the two source records side by side.
+- Point to the explanation and signal bars.
+- Click **Approve** on one medium-confidence case if you want to show interaction.
+- If you click approve, briefly show that the pending count changes.
 
 Say:
 
-> Medium-confidence cases are not silently merged. A reviewer sees the full evidence and decides whether to approve or reject. This is how UBID-X avoids dangerous false merges.
+> This is the human review layer. UBID-X does not blindly merge every similar-looking business. Medium-confidence matches come here because they need a human decision.
 
-#### 1:50 to 2:20 - Activity Intel
+Then say:
+
+> The reviewer can compare both records side by side, see the confidence score, inspect the signal breakdown, and understand the explanation before approving or rejecting the link.
+
+Then say:
+
+> This is one of the biggest safeguards in UBID-X. A false merge can create serious government errors: wrong compliance action, wrong subsidy targeting, wrong business counts, or wrong district intelligence. The review queue makes the system safer and auditable.
+
+Why this matters:
+
+- Judges see that UBID-X is not careless automation.
+- This directly answers the likely question: "What if the system links two different businesses?"
+
+#### 2:50 to 3:40 - Activity Intel: show the business intelligence layer
 
 Open Activity Intel.
 
-Show Active, Dormant, Closed, and Unmatched filters.
+What to do:
+
+- Click **Activity Intel**.
+- Show the business list.
+- Click or point to **Active**, **Dormant**, **Closed**, and **Unmatched** filters.
+- For one business, point to last activity date and reason.
+- For unmatched events, point out that unresolved activity is still visible.
 
 Say:
 
-> After identity is resolved, UBID-X maps activity events to each business. GST filings, utility signals, inspections, renewals, and cancellation notices help classify whether a unit is active, dormant, or closed. Unmatched events remain visible for reconciliation.
+> Once identity is resolved, UBID-X becomes more than a registry. It becomes an active business intelligence layer. Each UBID can receive activity events from different departments: GST filings, utility consumption, labour returns, pollution consent renewals, inspections, license renewals, or cancellation notices.
 
-#### 2:20 to 2:40 - Analytics
+Then say:
+
+> Based on those events, UBID-X classifies businesses as Active, Dormant, or Closed, and it shows the reason for that status. For example, a recent GST filing and utility signal can support Active status. Long inactivity or cancellation evidence can support Closed status.
+
+Then click or point to **Unmatched** and say:
+
+> This Unmatched view is important. If an event cannot be confidently mapped to a UBID, UBID-X does not hide it. It keeps it visible for reconciliation. That means no source signal silently disappears.
+
+Why this matters:
+
+- Judges understand the second half of the product: activity status.
+- You show why UBID-X is more valuable than a static business ID.
+
+#### 3:40 to 4:20 - Analytics: show policy value
 
 Open Analytics.
 
-Show the query shelf.
+What to do:
+
+- Click **Analytics**.
+- Show the query shelf.
+- Click or point to each query title.
+- Point to district activity distribution.
 
 Say:
 
-> Once UBIDs exist, officers can ask cross-department questions: which businesses are active in GST but missing in Industries, which dormant units have high employment, and which potential merges are risky.
+> This is where UBID-X becomes useful for policy and operations. Once records are linked through UBIDs, officers can ask questions that are very hard to answer when each department has its own separate identifier.
 
-#### 2:40 to 3:00 - Architecture And Close
+Then say:
+
+> For example: which businesses are active in GST but missing from Industries? Which dormant units still have high employment records? Which candidate merges are risky and should stay on a watchlist?
+
+Then say:
+
+> These are not just dashboard numbers. These are action lists for outreach, inspection, reconciliation, and district planning.
+
+Why this matters:
+
+- Judges see the outcome, not only the data pipeline.
+- This connects the prototype to governance impact.
+
+#### 4:20 to 4:45 - Architecture: show feasibility
 
 Open Architecture.
 
+What to do:
+
+- Click **Architecture**.
+- Point to the pipeline lane.
+- Point to the proposed stack and risk controls.
+
 Say:
 
-> UBID-X is deployable without replacing existing systems. It can ingest department data, standardize records, score matches, route reviews, classify activity, and expose analytics. The goal is one trusted business identity layer for Karnataka.
+> UBID-X is designed to be piloted without replacing existing department systems. It can ingest source records, standardize them, score matches, route medium-confidence cases to review, classify activity, and expose analytics through dashboards and APIs.
+
+Then say:
+
+> A production pilot can start with a few departments and selected districts, then expand as reviewer feedback improves the matching rules and confidence thresholds.
+
+Why this matters:
+
+- Judges see that the idea is deployable.
+- You avoid sounding like the project requires a massive all-at-once system replacement.
+
+#### 4:45 to 5:00 - Closing: repeat the core value
+
+Open Product Guide or return to Mission Control.
+
+What to do:
+
+- Click **Product Guide** if you want to show the workflow.
+- Or return to **Mission Control** for a cleaner closing frame.
+- End with the product promise.
+
+Say:
+
+> To summarize, UBID-X turns fragmented department records into one trusted, explainable, and activity-aware business intelligence layer. Existing identifiers like GSTIN and PAN are not replaced; they become evidence. The final output is a UBID that officers can trust, review, audit, and use for real policy action.
+
+Final line:
+
+> UBID-X is not just record linkage. It is a trusted operating picture of Karnataka's business ecosystem.
+
+### 5-Minute Demo Recording Checklist
+
+Before recording:
+
+- Run `npm run dev`.
+- Open `http://127.0.0.1:5173`.
+- Close all unrelated tabs.
+- Keep a copy of this script open on another screen or printed.
+- Practice once without recording.
+
+During recording:
+
+- Speak slower than normal.
+- After every tab click, pause briefly so the judge can read the screen.
+- Use the cursor like a pointer.
+- Do not rush through the Review Queue and Activity Intel; they are the strongest parts of the demo.
+- Avoid saying "this is just mock data" too often. Say once: "The prototype uses realistic mock data to demonstrate the workflow."
+
+Must-show moments:
+
+- Mission Control headline and workflow.
+- Six source streams.
+- Decision bands: auto-link, human review, keep separate.
+- UBID Generator confidence score and signal bars.
+- Review Queue approve/reject safeguard.
+- Activity Intel status reason and unmatched events.
+- Analytics policy queries.
+- Architecture showing non-intrusive deployment.
 
 ## Suggested PPT Speaking Flow
 
